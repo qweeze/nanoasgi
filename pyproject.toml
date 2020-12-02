@@ -1,0 +1,12 @@
+[tool.poetry]
+name = "nanoasgi"
+version = "0.0.1"
+description = "A nano ASGI framework"
+authors = ["George Fortunatov <qweeeze@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
