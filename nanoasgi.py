@@ -120,7 +120,7 @@ class App:
         })
 
     async def _handle_request(self, scope, receive):
-        match = self._match(scope['method'], scope['path'])
+        match = self._match(scope['path'])
         if match is None:
             return Response(status=404)
 
@@ -137,7 +137,7 @@ class App:
         )
         return await handler(request, **params)
 
-    def _match(self, request_method, request_path):
+    def _match(self, request_path):
         for path, method, handler in self._routes:
             if (m := path.match(request_path)) is not None:
                 return method, handler, m.groupdict()
