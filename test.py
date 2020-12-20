@@ -33,4 +33,4 @@ async def test_quart_app():
     async with TestClient(app) as client:
         resp = await client.get('/api/hello/World/')
         assert resp.status_code == 200
-        assert resp.json() == {'result': 'Hello World!'},
+        assert resp.json() == {'result': 'Hello World!'}
