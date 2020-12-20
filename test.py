@@ -1,7 +1,7 @@
 # test.py
 
 
-from nanoasgi import App
+from nanoasgi import App, Response
 from async_asgi_testclient import TestClient
 import pytest
 
