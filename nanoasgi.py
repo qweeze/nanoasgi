@@ -139,7 +139,8 @@ class App:
 
     def _match(self, request_path):
         for path, method, handler in self._routes:
-            if (m := path.match(request_path)) is not None:
+            m = path.match(request_path)
+            if m is not None:
                 return method, handler, m.groupdict()
 
     @staticmethod
