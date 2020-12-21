@@ -1,4 +1,4 @@
-# test.py
+# test_simple.py
 
 
 from nanoasgi import App, Response
@@ -29,7 +29,7 @@ async def hello_handler(request, name):
 
 
 @pytest.mark.asyncio
-async def test_quart_app():
+async def test_app():
     async with TestClient(app) as client:
         resp = await client.get('/api/hello/World/')
         assert resp.status_code == 200
